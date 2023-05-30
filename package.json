@@ -12,6 +12,7 @@
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.18",
     "@types/uuid": "^9.0.0",
+    "epub-gen-memory": "^1.0.10",
     "lodash": "^4.17.21",
     "prince": "^1.9.11",
     "sequelize": "^6.28.0",
