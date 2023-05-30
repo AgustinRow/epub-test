@@ -438,7 +438,31 @@ const fullBackMatterSections = sectionsRearMatter.map(section => ({...section, c
 
 
 const epub = new EPub(
-  { title: 'asdasd' }, 
+  { title: 'asdasd', tocXHTML: `<section class='toc'>
+  <h1 class='toc-title'>Contents</h1>
+  <div class='toc-content'>
+    <ol class='front-matter'>
+      <li class='toc-section'><a href="#1-dedication">Dedication</a></li>
+      <li class='toc-chapter'><a href="#5-chapter">The Beginning of the Best Book</a></li>   
+      <li class='toc-section'><a href="#1-about-the-author">About the author</a></li>   
+
+    </ol>
+    
+    <ol class='body-matter'>
+
+      <li data-chapter-number='1' class='toc-chapter'><a href="#1-chapter">Chapter</a></li>
+      <li class='toc-part'><a href='#1-part'>Part example</a></li>
+      <li class='toc-section'><a href='#1-notes'>Notes 1</a></li>
+      <li data-chapter-number='2' class='toc-chapter'><a href="#2-chapter">Chapter</a></li>
+    </ol>
+    <ol class='rear-matter'>
+      <li class='toc-part'><a href='#2-part'>Part example</a></li>
+      <li class='toc-section'><a href="#1-text-insert">Text insert</a></li>
+
+
+    </ol>
+  </div>
+</section>` }, 
   fullFrontMatterSections.concat(fullBodyMatterSections).concat(fullBackMatterSections))
 epub.genEpub().then((pdfGenerator: any) => {
 const readableStream = Readable.from(pdfGenerator)
