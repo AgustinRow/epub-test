@@ -1,0 +1,761 @@
+/*-------------**************** Austin Ebook Line ****************-------------*/
+
+body {
+	-webkit-hyphens:auto;
+	hyphens: auto;
+	hyphenate-before: 2;
+	hyphenate-after: 3;
+	hyphenate-lines: 2;
+	font-size: 1em;
+	}
+p {
+	font-family:ebgaramond;
+	line-height: 1.4em;
+	text-align: justify;
+	margin: 0;
+	}
+h1, h2, h3, h4, h5 {
+	line-height: 1.4;
+	font-weight: normal;
+	}
+.dropcap { 
+	font-family:roboto;
+	float: left; 
+	font-weight: normal;
+	font-size: 3.05em; 
+	padding-right: 1px;
+	margin-bottom:0em;
+	margin-top:.1em;
+	}
+
+@media amzn-kf8 {
+.dropcap { 
+	font-family:roboto;
+	float: left; 
+	font-weight: normal;
+	font-size: 3em; 
+	margin-right: 2px;
+	margin-bottom:-.2em;
+	margin-top:-.28em;
+	}
+}
+	.title a {
+		text-decoration: underline;
+		color:inherit;
+	}
+.caption {
+	font-family:roboto;
+	font-weight:bold; 
+	font-size:75%;
+	line-height:1.3;
+	text-align: center;
+}
+.credit {
+	font-family:roboto;
+	font-weight:normal;
+	font-style:italic; 
+	font-size:70%;
+	line-height:1.3;
+	text-align: center;
+}
+.publisher {
+	font-family: roboto;
+	font-size:.85em;
+}
+
+/*-----------Publisher for just this Template------*/
+
+.publisher {
+	width:100%;
+	margin:22% 0 0 0;
+	text-align: right;
+}
+	.publisher-icon {
+		width:10%;
+		margin:0 0 2px auto;
+	}
+		.publisher-icon img {
+			width:100%;
+		}
+	.publisher-name p {
+		font-size: .8em;
+		line-height: 1.2;
+		text-align: right;
+		margin:auto;
+	}
+
+/*------------Front Matter------------*/
+
+.half-title .half-title-page .title {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:normal;
+	font-style:normal;
+
+	font-size:1.5em;
+	line-height:1.3;
+	
+	text-align: right;
+
+	letter-spacing: .06em;
+	margin:20% 0 0 10%;
+	}
+.title-page {
+	margin:1em;
+}
+.full-title .title-page .title {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:normal;
+	font-style:normal;
+
+	font-size:1.5em;
+	line-height:1.3;
+	
+	text-align: right;
+
+	letter-spacing: .06em;
+	margin:20% 0 0 10%;
+	}
+.full-title .title-page .subtitle {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:normal;
+	font-style:normal;
+	color:#595959;
+	
+	border-right: solid 8px #d7d7d7;
+	padding-right:12px;
+
+	font-size:1.35em;
+	line-height:1.3;
+
+	letter-spacing:.05em;
+	
+	text-align:right;
+	margin:1.5em 0 0 20%;
+	}
+.full-title .title-page .author {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:normal;
+
+	font-size:1.15em;
+	line-height:1.3;
+
+	letter-spacing:.06em;
+
+	text-align:right;
+	margin:20% 0 0 0;
+	border-bottom: none;
+	}
+.title-page p.contributor {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:normal;
+	font-style:normal;
+	color:#888888;
+
+	font-size:1em;
+	line-height:1.4;
+
+	text-transform:none;
+	letter-spacing:.05em;
+	
+	text-align:center;
+	margin:0.6em 0 0 10%;
+}
+.copyright {
+	margin:0 25% 0 0;
+	}
+	.copyright .title {
+		display:none;
+	}
+	.copyright p {
+		text-align: left;
+		font-size:.7em;
+		line-height:1.4em;
+		text-indent:0;
+		}
+	
+.dedication {
+	padding-top:25%;
+	}
+	.dedication .title {
+		display:none;
+	}
+	.dedication p {
+		hyphens: none;
+		-webkit-hyphens:none;
+	
+		font-family:roboto;
+		font-size:1em;
+		line-height:1.5;
+	
+		text-indent:0;
+		
+		text-align:center;
+		margin:0 5%;
+		}
+	.dedication .heading1 {
+		hyphens:none;
+		-webkit-hyphens:none;
+
+		font-family:roboto;
+		font-weight:bold;
+
+		font-size:1em;
+
+		text-indent:0;
+		text-transform:none;
+		letter-spacing:.1em;
+		margin-bottom:.5em;
+
+		page-break-after:avoid;
+	}
+
+/* ---------- EBOOK TOC ---------- */
+
+#contents ol {
+	margin-left:0; margin-right:0; /* Remove the default margin */
+	padding-left:0; padding-right:0; /* Remove the default padding */
+	text-align:right;
+	list-style-type: none;
+}
+#contents ol li {
+	page-break-inside: avoid;
+	text-align: right;
+}
+#contents ol li a {
+	text-decoration: underline;
+	color: inherit;
+}
+#contents ol li.toc-heading a {
+	text-decoration:none;
+	color: inherit;
+}
+
+#contents ol.body-matter > li {
+	margin-top:1em;
+}
+#contents li.toc-chapter a.tocnum {
+	font-family:roboto;
+	font-weight:bold;
+	text-transform:lowercase;
+	letter-spacing:.1em;
+	padding-right:8px;
+	margin-right:4px;
+	font-size:.9em;
+	border-right:4px solid #b7b7b7;
+}
+#contents li.toc-heading a.tocnum {
+	display:block;
+	font-family:roboto;
+	font-weight:bold;
+	text-transform:none;
+	letter-spacing:.1em;
+	padding-right:0;
+	margin-bottom:.6em;
+	color:#b7b7b7;
+}
+#contents a.tocnum {
+	text-decoration: none;
+}
+#contents .front-matter, #contents .rear-matter {
+	font-family:roboto;
+	font-weight:bold;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	font-size:.75em;
+	line-height: 1.6;
+}
+#contents .body-matter {
+	margin-top:2em;
+	font-family:roboto;
+	font-weight:normal;
+	text-align:right;
+	-webkit-hyphens:none;
+	hyphens:none;
+}
+#contents .rear-matter {
+	margin:2em 0 0 0;
+}
+
+li.toc1.toc-heading {
+	font-family:roboto;
+	font-weight:bold;
+	font-size:1em;
+	line-height:1.4;
+	text-align:right !important;
+	text-indent:0;
+	letter-spacing:.07em;
+	margin:1.4em 0 .4em 0;
+	page-break-after: avoid;
+	}
+.toc1 {
+	font-family:roboto;
+	font-weight:normal;
+	text-align:right;
+	-webkit-hyphens:none;
+	hyphens:none;
+	list-style:none;
+	}
+
+/*------------ Body Matter ------------*/
+
+.part .partnumber {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	color:#aaaaaa;
+
+	font-size: 1.65em;
+	line-height: 1.4;
+
+	text-transform:none;
+
+	text-align:right;
+	margin:20px 0 2em 0; 
+	text-indent: 0;
+	}
+.part .title {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+
+	font-size:1.5em;
+	line-height:1.3;
+
+	letter-spacing: .06em;
+
+	text-align:right;
+	margin:0 0 10% 1em;
+	}
+.part .subtitle {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-style:normal;
+	color:#595959;
+
+	font-size:1.35em;
+	line-height:1.3;
+	letter-spacing: .06em;
+
+	text-align: right;
+	margin:1em 0 1.5em 25%;
+	text-indent: 0; 
+	}
+.part .author {
+	font-family:roboto;
+
+	text-align:left;
+	font-size:.9em;
+	line-height:1.3;
+
+	letter-spacing:.1em;
+	text-transform:uppercase;
+
+	text-align:right;
+	margin-left:15%; margin-right:0;
+	text-indent:0 !important;
+	clear:both;
+	}
+
+/* .part blockquote.quote {
+		font-size:.9em;
+		letter-spacing:.05em;
+		padding:1em 0 1em .5em;
+		margin-right:0;
+		}
+	.part .quote p {
+		font-family:roboto;
+		line-height: 1.5;
+		text-indent:0;
+	}
+	.part .quoteauthor {
+		font-family:roboto;
+		font-weight: bold;
+		font-style: normal;
+		text-align: right;
+		font-size: .8em;
+		line-height: 1.4;
+		margin-top: .5em;
+		text-transform: uppercase;
+		letter-spacing: .08em;
+		} */
+
+.chapter .chapternumber, .text-insert .chapternumber, .photo-insert .chapternumber {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight:bold;
+	
+	border-right: solid 8px #bbbbbb;
+	padding-right:12px;
+	
+	line-height: 1.3;
+	color:#757575;
+
+	margin:20px 0 1em 0;
+	text-align:right;
+	}
+	.chapternumber.number {
+		font-size: 1.5em;
+	}
+	.chapternumber.roman {
+		font-size:1.15em;
+		line-height:1.5;
+		letter-spacing:.06em;
+	}
+	.chapternumber.word {
+		font-size:1em;
+		line-height:1.5;
+		letter-spacing:.06em;
+	}
+	.chapternumber.custom {
+		font-size:1em;
+		line-height:1.5;
+		letter-spacing:.06em;
+	}
+
+.chapter .title, .text-insert .title, .photo-insert .title, 
+.body-matter.references .title, .body-matter.notes .title {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+
+	font-size:1.25em;
+	line-height:1.4;
+
+	letter-spacing:.06em;
+
+	text-align:right;
+	margin:2em 20px 2em 20%;
+	}
+.chapter .subtitle, .text-insert .subtitle, .photo-insert .subtitle, 
+.body-matter.references .subtitle, .body-matter.notes .subtitle {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-style:italic;
+
+	font-size:1.15em;
+	line-height:1.3;
+	
+	letter-spacing:.08em;
+
+	text-align:right;
+	margin:2em 20px 2em 15%;
+	text-indent: 0; 
+	clear: both;
+	}
+.chapter .author, .text-insert .author, .photo-insert .author, 
+.body-matter.references .author, .body-matter.notes .author {
+	font-family:roboto;
+
+	text-align: right;
+	font-size: .95em;
+	line-height: 1.4;
+	
+	letter-spacing: .1em;
+	text-transform: uppercase;	
+	margin:2em 20px 2em 15%;
+	text-indent: 0 !important;
+	clear: both;
+	}
+	
+.part .heading1, .chapter .heading1, .text-insert .heading1, .photo-insert .heading1 {
+	hyphens: none;
+	-webkit-hyphens: none;
+
+	font-family:roboto;
+	font-weight:bold;
+
+	font-size: .975em;
+	line-height: 1.4;
+
+	text-indent:0;
+	text-transform:none;
+	letter-spacing:.1em;
+	margin:2.5em 0 1em 0;
+	text-align:left;	
+
+	page-break-after: avoid;
+	}
+.part .heading2, .chapter .heading2, .text-insert .heading2, .photo-insert .heading2 {
+	hyphens: none;
+	-webkit-hyphens: none;
+
+	font-family:roboto;
+	font-weight:bold;
+	font-style:italic;
+
+	font-size: .925em;
+	line-height: 1.4;
+
+	letter-spacing: .05em;
+	margin:2em 0 .5em 0;
+	text-align:left;
+	text-indent:0;
+	
+	page-break-after: avoid;
+	}
+.part .heading3, .chapter .heading3, .text-insert .heading3, .photo-insert .heading3 {
+	hyphens: none;
+	-webkit-hyphens: none;
+
+	font-family:roboto;
+	font-weight:normal;
+	font-size: .925em;
+	line-height: 1.4;
+
+	text-align: left;
+	margin: 1.5em 0 0 0;
+	text-indent: 0;
+	
+	letter-spacing:.07em;
+
+	page-break-after: avoid;
+	}
+
+blockquote.quote {/* Right aligned Austin template only */
+	margin-right: 20px;
+	}		
+.part blockquote.quote p:not(.quoteauthor), .chapter blockquote.quote p:not(.quoteauthor), .text-insert blockquote.quote p:not(.quoteauthor), .photo-insert blockquote.quote p:not(.quoteauthor) {
+		font-family:roboto;
+		font-size:.9em;
+		text-indent: 1em;
+	}
+	.part .quoteauthor, .chapter .quoteauthor, .text-insert .quoteauthor, .photo-insert .quoteauthor {
+		font-family:roboto;
+		text-transform: uppercase;
+		letter-spacing: .07em;
+		font-weight:bold;
+		font-style: normal;
+		text-align: right;
+		font-size: .7em;
+		margin-top: .5em;
+		}
+	.letter {
+		font-family:ebgaramond;
+		margin:1em;
+		text-indent:1em;
+	}
+	.salutation {
+		text-indent:0;
+		page-break-after: avoid;
+		}
+	.signature {
+		text-indent:0;
+		text-align: right;
+		}
+	.excerpt {
+		font-family:ebgaramond;
+		text-align:justify;
+		margin:1em;
+		font-size: .935em;
+		text-indent:1em;
+	}
+.part .block, .chapter .block, .text-insert .block, .photo-insert .block {
+	margin:1em 0;
+	page-break-inside: auto !important;
+	border-left:9px solid #bbbbbb;
+	border-right:9px solid #bbbbbb;
+	padding-left:2%; padding-right:2%;
+}
+	.block p {
+		text-indent: 1em;
+		font-family:roboto;
+		font-size: 80%;
+		line-height: 1.6;
+		letter-spacing: .04em;
+		color:#333333;
+	}
+	
+ul, ol {
+	font-family:ebgaramond;
+}
+ul.unnumbered {
+	text-indent: -1em;
+	list-style-type:none;
+	}
+	
+/*- Tables --*/
+
+table {
+	font-family:ebgaramond;
+	border-top:3px solid #bbb !important;
+	border-bottom:3px solid #bbb !important;
+	border-collapse: collapse;
+}	
+table td {
+	font-family:ebgaramond;
+	font-size: .95em;
+	border-left:1px solid #bbb;
+	border-right:1px solid #bbb;
+	padding:.375em .25em;
+	-webkit-hyphens:none;
+	hyphens:none;
+	min-width:10%;
+	}
+	tr {
+		border-bottom: solid 1px #bbb
+	}
+
+
+/*---------- Front / Rear Matter ----------*/
+
+#contents .title, .front-matter .title, .rear-matter .title {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-weight: bold;
+	color:#595959;
+
+	font-size:1.15em;
+	line-height: 1.3;
+	
+	border-right: solid 8px #d7d7d7;
+	padding-right:12px;
+	
+	text-transform: uppercase;
+	letter-spacing:.06em;
+
+	text-align:right;
+	margin:20px 0 2em 0;
+	text-indent: 0; 
+	}
+.front-matter .subtitle, .rear-matter .subtitle {
+	-webkit-hyphens:none;
+	hyphens:none;
+
+	font-family:roboto;
+	font-style:normal;
+
+	font-size:1.15em;
+	line-height:1.3;
+	
+	letter-spacing:0;
+
+	text-align:right;
+	margin: 2em 20px 2em 0;
+	clear:both;
+	}
+.front-matter .author, .rear-matter .author {
+	font-family:roboto;
+
+	text-align:left;
+	font-size:.875em;
+	line-height:1.3;
+
+	letter-spacing:.1em;
+	text-transform:uppercase;
+
+	text-align:right;
+	margin-left:15%; margin-right:20px;
+	text-indent:0 !important;
+	clear:both;
+	}
+.references .heading1, .notes .heading1 {
+	hyphens: none;
+	-webkit-hyphens: none;
+
+	font-family:roboto;
+	font-weight:bold;
+
+	font-size: .9em;
+	line-height: 1.3;
+
+	text-indent:0;
+	margin: 2.4em 0 .5em 0;
+	text-align: left;	
+
+	page-break-after: avoid;		
+	}
+.references .heading2, .notes .heading2 {
+	hyphens: none;
+	-webkit-hyphens: none;
+
+	font-family:roboto;
+	font-weight:bold;
+	font-style:italic;
+
+	font-size: .825em;
+	line-height: 1.4;
+
+	letter-spacing: .05em;
+	margin: 1.05em 0 .3em 0;
+	text-align: left;
+	text-indent:0;
+	
+	page-break-after: avoid;
+	}
+
+.references p, .notes p {
+	font-size:.8em;
+	line-height:1.3;
+	text-indent:1em;
+	}
+.references ol, .references ul,
+.notes ol, .notes ul {
+	font-size:.8em;
+	line-height:1.3;
+	padding: 0 0 0 1.5em;
+    margin: 1em 0 1em .5em;
+	}
+.references blockquote.quote p:not(.quoteauthor), .notes blockquote.quote p:not(.quoteauthor) {
+	font-family:roboto;
+	text-indent:1em;
+	}
+	.references .quoteauthor, .notes .quoteauthor {
+		font-family:roboto;
+		text-transform:uppercase;
+		letter-spacing:.07em;
+		font-weight:bold;
+		font-style:normal;
+		text-align:right;
+		font-size:.7em;
+		margin-top: .25em;
+		}
+.references .excerpt, .notes .excerpt {
+	margin:1em;
+	font-size: .935em;
+	}
+	.references .excerpt p, .notes .excerpt p {
+		text-indent: 1em;
+	}
+
+.references .block, .notes .block {
+	margin: 1em 0;
+	page-break-inside: auto !important;
+	border-left:.75em solid #bbbbbb;
+	border-right:.75em solid #bbbbbb;
+	padding-left:.5em; padding-right:.5em;
+	font-size: .8em;
+	line-height: 1.3;
+	}
+	.references .block p, .notes .block p {
+		text-indent: 1em;
+		font-family:roboto;
+		letter-spacing: .04em;
+		color:#333333;
+		font-size: .85em;
+	}
