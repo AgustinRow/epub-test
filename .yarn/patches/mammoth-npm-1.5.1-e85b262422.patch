@@ -1,0 +1,15 @@
+diff --git a/lib/document-to-html.js b/lib/document-to-html.js
+index 32e8b03005ef36bd6b3b14ce9cdcb3009386f72e..c9bf529812982c449c04aedaad90134e26f1b0ca 100644
+--- a/lib/document-to-html.js
++++ b/lib/document-to-html.js
+@@ -340,8 +340,8 @@ function DocumentConversion(options, comments) {
+             return style.to;
+         } else if (element.breakType === "line") {
+             return htmlPaths.topLevelElement("br");
+-        } else {
+-            return htmlPaths.empty;
++        } else if (element.breakType === "page") {
++            return htmlPaths.topLevelElement("hr");
+         }
+     }
+ 
